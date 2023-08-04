@@ -1,0 +1,209 @@
+.table-border {
+    border: 1px solid #F6F6F9;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 576px) {
+    .arkreen-table-pc {
+        display: none;
+    }
+    .arkreen-table-m {
+        display: block;
+    }
+    .rm-cell-grid {
+        display: flex;
+        flex-wrap: wrap;
+        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
+        padding-block: 16px;
+    }
+    
+    .rm-cell-td-img {
+        flex: 1;
+        color: black;
+        min-width: 280px;
+        padding: 6px 0px;
+    }
+    .rm-cell-td-detail {
+        flex: 1;
+        color: black;
+        min-width: 280px;
+        padding-top: 20px;
+    }
+    .rm-claimed-info {
+        text-align:center;
+        font-size:16px;
+        font-weight:bold;
+        padding-top:24px
+    }
+    .rm-title-info {
+        text-align:center;
+        font-size:20px;
+        font-weight:700;
+    }
+    .rm-remote-miner-logo {
+        width: 280px;
+        height: 280px;
+        border-radius: 8px;
+    }
+
+    .rm-remote-miner-logo span{
+        line-height: 280px;
+        color: #101010;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .rm-img-Skeleton {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .shop-bottom-divider {
+        background: #CFCFD2;
+        margin-top: 36px ;
+        height: 16px;
+    }
+
+    .shop-buy-btn {
+        text-align: center;
+    }
+    
+    .shop-buy-btn-flex-coupon {
+        padding:16px 0px 14px 0px;
+        display: flex;
+    }
+    .coupon-btn {
+        width:240px;
+        padding-inline:12px;
+        font-size:14px;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+
+    .coupon-btn {
+        width:auto;
+        padding-inline:12px;
+        font-size:14px;
+    }
+
+    .shop-buy-btn-flex {
+        display: flex;
+    }
+
+    .shop-buy-btn-flex-buy {
+        flex: 1;
+    }
+    .shop-buy-btn-flex-coupon {
+        padding-bottom: 14px;
+        display: flex;
+    }
+
+    .shop-bottom-divider {
+        background: #CFCFD2;
+        margin-top: 32px ;
+        height: 16px;
+    }
+
+    .rm-remote-miner-logo span{
+        line-height: 280px;
+        color: #101010;
+        font-weight: bold;
+        font-size: 16px;
+        
+    }
+    .rm-remote-miner-logo {
+        width: 280px;
+        height: 280px;
+        border-radius: 8px;
+    }
+    .rm-img-Skeleton {
+        width: 348px !important;
+        height: 348px !important;
+    }
+    .rm-title-info {
+        text-align:center;
+        font-size:20px;
+        font-weight:700;
+    }
+    .rm-claimed-info {
+        text-align:left;
+        font-size:16px;
+        font-weight:bold;
+        padding-top:16px
+    }
+    .arkreen-table-pc {
+        display: block;
+    }
+    .arkreen-table-m {
+        display: none;
+    }
+    .rm-cell-grid {
+        display: flex;
+        flex-wrap: wrap;
+        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
+        padding-block: 16px;
+    }
+    .rm-cell-td-img {
+        flex: 1;
+        color: black;
+        min-width: 280px;
+        padding: 16px 12px 16px 12px;
+        max-width: 408px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rm-cell-td-detail {
+        flex: 1;
+        color: black;
+        min-width: 280px;
+        padding: 12px 12px;
+        max-width: 466px;
+        text-align: left;
+    }
+}
+
+.arkreen-m-table {
+    padding: 12px 16px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.shop-buy-btn-box {
+    text-align:center;
+    font-size:16px;
+    font-weight:500;
+    padding-top:16px;
+}
+
+.shop-buy-info-box {
+    text-align:left;
+    font-size:16px;
+    font-weight:500;
+    background:#F6F6F9;
+    padding:8px;
+    border-radius:8px;
+    margin-top:24px;
+    margin-bottom:6px;
+}
+
+.shop-buy-miner-detail {
+    text-align:center;
+    font-size:16px;
+    font-weight:500;
+    display:flex;
+    flex-wrap:wrap
+}
+
+.shop-lock-time-box {
+    font-size:16px;
+    padding-top:24px;
+    text-align:center;
+    padding-left:3px;
+    font-weight: 600;
+}

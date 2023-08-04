@@ -1,0 +1,109 @@
+
+.ant-select-selector:hover {
+    border: #00913A 1px solid !important;
+}
+
+.ant-select-selector:focus {
+    background-color: #00913A !important;
+    box-shadow: 0 0 0 2px rgba(0, 145, 5, 0.1) !important;
+}
+
+.ant-select-item-option-active {
+    background: #E6F4EB !important;
+}
+
+.ant-select-item-option-active:hover {
+    background: #FFFFFF !important;
+    color: #00913A !important;
+}
+
+.ant-select-item-option-selected {
+    background: #E6F4EB !important;
+}
+
+.ant-select-item-option-selected:hover {
+    background: #E6F4EB !important;
+}
+
+
+@media screen and (max-width: 576px) {
+    .arkreen-select-title {
+        display: none;
+    }
+    .ant-select-selector {
+        background-color: #FFFFFF !important;
+        height: 44px;
+        border-radius: 22px !important;
+        border: #F6F6F9 1px solid !important;
+        font-family: 'Montserrat' !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        color: #101020 !important;
+    }
+    .arkreen-select {
+        width: 100%;
+        height: 44px;
+        margin-bottom: 6px;
+    }
+    .ant-select-selector {
+        width: 100%;
+        height: 44px !important;
+        padding: 0 11px;
+    }
+    .ant-select .ant-select-clear{
+        vertical-align: middle !important;
+        margin-right: 10% !important;
+        color: #40404D !important;
+    }
+    .ant-select .ant-select-arrow {
+        vertical-align: middle !important;
+        margin-right: 10% !important;
+        color: #40404D !important;
+    }
+
+    .ant-select-selection-placeholder {
+        margin-top: 6px !important;
+        color: #40404D !important;
+        text-align: center !important;
+    }
+
+    .ant-select-selection-item {
+        margin-top: 6px !important;
+        color: #40404D !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .arkreen-select-title {
+        color: #101020;
+    }
+    .ant-select-selection-placeholder {
+        display: none !important;
+    }
+    .ant-select-selector {
+        background-color: #F6F6F9 !important;
+        border-radius: 8px !important;
+        border: #F6F6F9 1px solid !important;
+        font-family: 'Montserrat' !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        color: #101020 !important;
+    }
+    .arkreen-select {
+        width: 240px;
+        padding: 6px, 36px, 6px, 12px;
+        height: 40px;
+        margin-left: 6px;
+    }
+    .ant-select .ant-select-clear{
+        vertical-align: middle !important;
+        margin-top: -10px !important;
+    }
+    .ant-select .ant-select-arrow {
+        vertical-align: middle !important;
+        margin-top: -10px !important;
+    }
+}

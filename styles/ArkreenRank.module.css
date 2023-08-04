@@ -1,0 +1,28 @@
+.rank-col {
+    min-width:230px;
+    
+    
+    flex: 1;
+
+    padding-block: 4px;
+}
+
+.rank-top {
+    border-left:2px solid #F0F0F0;
+    padding-inline:16px
+}
+
+.rank-top-title {
+    color:#101010;
+    font-size:18px;
+    font-weight:500;
+    text-align:center
+}
+
+.rank-top-value {
+    color:#101010;
+    font-size:18px;
+    font-weight:700;
+    text-align:center;
+    white-space:nowrap
+}

@@ -1,0 +1,64 @@
+
+.detail-info-box-header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #40404D;
+}
+
+.detail-info-box {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101020;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.divider {
+    width: 100%;
+    padding-top: 28px;
+}
+
+.copy-btn {
+    margin-inline: 5px;
+    color: #40404D;
+}
+
+.copy-btn:hover {
+    cursor: pointer;
+    color: #00913A;
+}
+
+@media screen and (min-width: 576px) {
+    .long-string {
+        float: left;
+    }
+
+    .copy-qrcode-box {
+        float:left;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .long-string {
+        float: left;
+        max-width: 250px;
+    }
+
+    .long-string span {
+        word-wrap: break-word;
+        word-break: normal;
+    }
+
+    .copy-qrcode-box {
+        float:right;
+        margin-right: -6px;
+        line-height: 60px;
+    }
+}

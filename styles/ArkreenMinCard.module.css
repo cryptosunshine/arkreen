@@ -1,0 +1,70 @@
+.min-card-body{
+    height:82px;
+    padding: 10px 10px;
+    gap: 4px;
+    isolation: isolate;
+    height: 82px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.min-card-body .icon {
+    font-size:2.6em;
+    line-height: 60px;
+    text-align: right;
+    float: right;
+}
+
+.overview-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #101020;
+}
+
+.min-card-body .right {
+    float:left;
+    padding:5px;
+    min-width: 60%;
+}
+
+.min-card-body .right .title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.min-card-body .right .content{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.overview-card-body{
+    padding: 16px 16px 8px 16px;
+    gap: 24px;
+    isolation: isolate;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.overview-card-body .right .title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.overview-card-body .right .content{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+}

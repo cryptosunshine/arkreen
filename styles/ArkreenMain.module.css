@@ -1,0 +1,650 @@
+
+.arkreen-login {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arkreen-login-background {
+    background-color:#FFFFFF;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.arkreen-login-main {
+    color: #101020;
+    border: 1px solid rgba(49, 80, 125, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    min-width: 300px;
+    max-width: 450px;
+    width: 90%;
+    /*background: -webkit-linear-gradient(right, rgba(40, 236, 119,0.1), rgba(75, 244, 255,0.1));*/ 
+    box-shadow: rgba(74, 79, 97, 0.25) 0px 13px 27px -5px, rgba(74, 79, 97, 0.3) 0px 8px 16px -8px;
+}
+
+.arkreen-login-logo {
+    font-size: 32px;
+    text-align: center;
+    padding: 12px 12px 6px 12px;
+}
+
+.arkreen-login-title {
+    font-size: 16px;
+    color: #00913A;
+    font-weight: 500;
+    text-align: center;
+}
+
+.arkreen-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 24px;
+}
+
+.css-iqkj04 {
+    position: absolute;
+    opacity: 1;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 576px) {
+
+    .arkreen-shop-history {
+        display:block;
+        flex:1;
+    }
+    
+    .arkreen-shop-history-title {
+        padding-left:12px;
+        flex:1;
+        min-width:100%;
+    }
+    .arkreen-shop-history-status {
+        color:#40404D;
+        font-weight:500;
+        font-size:14px;
+        text-align:left;
+        padding-left:12px;
+    }
+    .arkreen-404 {
+        text-align: center;
+        gap: 4px;
+        padding: 16px 16px 16px 16px;
+        margin-top: 20%;
+    }
+    .arkreen-404-info{
+        font-weight: 400;
+        font-size: 14px;
+        text-align:center;
+        padding: 8px;
+    }
+    .arkreen-select-group {
+        display:flex;
+    }
+    .arkreen-select-item {
+        width: 50%;
+        float: left;
+    }
+    .arkreen-select-padding-left {
+        padding-left: 6px;
+    }
+    .arkreen-select-padding-right {
+        padding-right: 6px;
+    }
+
+    .test-user-info {
+        display: inline;
+        line-height: 40px;
+    }
+    .test-user-login-btn {
+        float: right;
+    }
+    .test-user-ref-btn {
+        margin-top: 16px;
+        display: flex;
+    }
+    .test-user-version {
+        flex: 1;
+        text-align: left;
+        line-height: 40px;
+    }
+    .test-user-btn {
+        text-align: right;
+    }
+    .test-user-contr {
+        padding:12px 12px;
+    }
+    .arkreen-modal-body {
+        width:360px;
+        height: auto;
+        border-radius: 8px;
+        padding: 12px 0px;
+    }
+
+    .arkreen-modal {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index: 1000;
+        background-color: rgba(0,0,0,.45);
+        justify-content: center;
+        padding-top: 30%;
+    }
+
+    .test-r1-fh {
+        border-radius:8px;
+    }
+
+    .m-balance {
+        min-width: 100%;
+    }
+
+    .arkreen-login-title-style {
+        flex:1;
+        display: none;
+    }
+
+    .arkreen-login-main-style {
+        flex: 1;
+        width:300px;
+        height:300px;
+        padding-top:62px;
+        /*border-radius: 8px;
+        border: 0.5px solid #F4F4F5;*/
+        background: #FFFFFF !important;
+    }
+
+    .arkreen_standard_miner_steps {
+        width: 90%;
+        margin:auto;
+    }
+
+    .arkreen_standard_miner_activation_code {
+        width: 90%;
+        margin:auto;
+    }
+
+    .arkreen_tab_item_box {
+        flex:1;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+
+    .arkreen_standard_miner_activation_code {
+        width: 60%;
+        min-width: 390px;
+        margin:auto;
+    }
+
+    .arkreen_standard_miner_steps {
+        width: 70%;
+        margin:auto;
+    }
+
+    .arkreen-shop-history {
+        display:flex;
+        flex:1;
+        flex-flow:wrap
+    }
+
+    .arkreen-shop-history-title {
+        padding-inline:12px;
+        line-height:45px;
+        flex:1;
+    }
+    .arkreen-shop-history-status {
+        line-height:45px;
+        color:#40404D;
+        font-weight:500;
+        font-size:14px;
+        text-align:right;
+    }
+
+    .arkreen-login-title-style {
+        flex:1
+    }
+
+    .arkreen-login-main-style {
+        flex: 1;
+        width:400px;
+        height:400px;
+        padding-top:112px;
+    }
+
+    .test-r1-fh {
+        padding:16px;
+        background-color:#FFFFFF;
+        border-radius:8px;
+    }
+
+    .test-user-contr {
+        padding:12px 12px;
+        display: flex;
+    }
+
+    .test-user-ref-btn {
+        display: flex;
+    }
+
+    .test-user-log-btn {
+        flex: 1;
+        display: flex;
+    }
+
+    .test-user-version {
+        flex: 1;
+        text-align: left;
+        line-height: 40px;
+    }
+    .test-user-btn {
+        text-align: right;
+    }
+
+    .test-user-info {
+        flex: 1;
+        text-align: left;
+        line-height: 40px;
+    }
+
+    .test-user-login-btn {
+        display: none;
+    }
+
+    .arkreen-main-content {
+        background-color:#FFFFFF;
+        padding:16px 16px 16px 16px;
+    }
+
+    .arkreen-404 {
+        width:100%;
+        text-align: center;
+        padding-top: 15%;
+    }
+
+    .arkreen-404-info{
+        font-weight: 400;
+        font-size: 14px;
+        text-align:center;
+        padding: 8px;
+    }
+    .arkreen-select-group {
+        display:flex;
+        padding-bottom: 6px;
+    }
+    .arkreen-select-item {
+        float: left;
+        padding-inline-end: 16px;
+    }
+    .arkreen-modal-body {
+        min-width: 408px;
+        border-radius: 8px;
+        padding: 20px 24px;
+        max-width: 408px;
+    }
+    .arkreen-modal {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index: 1000;
+        background-color: rgba(0,0,0,.45);
+        justify-content: center;
+        padding-top: 5%;
+    }
+}
+
+.arkreen_tab_item {
+    color:#101001;
+    text-align:center;
+    line-height:42px;
+    cursor: pointer;
+    padding-inline: 24px;
+}
+
+.arkreen_tab_item_active{
+    color:#00913a !important;
+    /* background:#FFFFFF !important; */
+    /* background:-webkit-linear-gradient(bottom, #00913A0D , #00913A00); */
+    border-bottom: 4px solid #00913a !important;
+    
+}
+
+.web3string {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.arkreen-404-title {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #101020;
+    padding: 8px;
+}
+
+.arkreen-404-btn {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #00913A;
+    padding: 8px;
+}
+
+.arkreen-404-back {
+    color: #00913A;
+    border: 1px solid #00913A;
+    border-radius: 16px;
+    align-items: center;
+    padding: 5px 16px;
+}
+
+.arkreen-404-back:hover {
+    color: #00913A !important;
+    border: 1px solid #00913A !important;
+    background-color: #E6F4EB;
+}
+
+.arkreen-console-main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: antiquewhite;
+    padding-inline: 12px;
+    z-index: 9000;
+}
+
+.arkreen-test-console {
+    width:100%;
+    height:35vh;
+    background-color: #101020;
+    border-radius: 8px;
+    padding: 8px 8px;
+    color: bisque;
+    overflow: scroll;
+    z-index: 9000;
+}
+
+.arkreen-console-min {
+    position: absolute;
+    bottom: 24px;
+    right: 12px;
+    background-color: #101020;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+    z-index: 9000;
+}
+
+.arkreen-modal-context {
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.arkreen-modal-title {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display:flex;
+    color:#40404D;
+    font-size: 16px;
+    background: #F6F6F9;
+    height:56px;
+    padding: 0px 16px;
+}
+
+.arkreen-modal-title div {
+    line-height: 56px;
+}
+
+.arkreen-modal-close {
+    text-align:right;
+    cursor:pointer;
+    color: #707079;
+}
+
+.arkreen-modal-close:hover{
+    color: #00913A;
+}
+
+.arkreen-main {
+    padding:4px 0px
+}
+
+.arkreen-main-title {
+    font-size:24px;
+    line-height:32px;
+    padding-block-end:10px;
+    margin-top: -10px;
+    color: #101020;
+}
+
+.ant-tag {
+    margin-inline-end: 0px !important;
+}
+
+.message-transition {
+    line-height:30px;
+    padding-bottom:16px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.shop-buy-btn {
+    width: 240px;
+    background:  #00913A;
+    color: #FFFFFF;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: unset;
+}
+
+.shop-withdraw-btn {
+    width: 240px;
+    background:  #FFFFFF;
+    color: #00913A;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #00913A;
+}
+
+.shop-buy-btn:hover{
+    color: #FFFFFF !important;
+    cursor: pointer;
+    background-color: #33A761;
+}
+
+.shop-buy-btn:disabled{
+    color: #FFFFFF !important;
+    background-color: #B3DEC4;
+    cursor: not-allowed;
+}
+
+.shop-withdraw-btn:hover{
+    color: #33A761 !important;
+    cursor: pointer;
+    background-color: #E6F4EB;
+}
+
+.shop-withdraw-btn:disabled{
+    color: #B3DEC4 !important;
+    background-color: #F5F5F5;
+    cursor: not-allowed;
+}
+
+.arkreen-button-default {
+    width: 240px;
+    background:  #00913A;
+    color: #FFFFFF;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: unset;
+}
+
+.arkreen-button-default:hover{
+    color: #FFFFFF !important;
+    cursor: pointer;
+    background-color: #33A761;
+}
+
+.arkreen-button-default:disabled{
+    color: #FFFFFF !important;
+    background-color: #B3DEC4;
+    cursor: not-allowed;
+}
+
+.arkreen-button-ghost {
+    width: 240px;
+    background:  #FFFFFF;
+    color: #00913A;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #00913A;
+}
+
+.arkreen-button-ghost:hover{
+    color: #33A761 !important;
+    cursor: pointer;
+    background-color: #E6F4EB;
+}
+
+.arkreen-button-ghost:disabled{
+    color: #B3DEC4 !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #B3DEC4 !important;
+    cursor: not-allowed;
+}
+
+.arkreen-button-primary {
+    width: 240px;
+    background:  #1FA484;
+    color: #FFFFFF;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: unset;
+}
+
+.arkreen-button-primary:hover{
+    color: #FFFFFF !important;
+    cursor: pointer;
+    background-color: #4CB69D !important;;
+}
+
+.arkreen-button-primary:disabled{
+    color: #FFFFFF !important;
+    background-color: #BCE4DA !important;
+    cursor: not-allowed;
+}
+
+.arkreen-button-text {
+    width: 240px;
+    background:  #FFFFFF;
+    color: #00913A;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #00913A;
+}
+
+.arkreen-button-text:hover{
+    color: #00913A !important;
+    cursor: pointer;
+    background-color: #FFFFFF !important;;
+}
+
+.arkreen-button-text:disabled{
+    color: #00913A !important;
+    background-color: #FFFFFF !important;
+    cursor: not-allowed;
+}
+
+.arkreen-button-dashed {
+    width: 240px;
+    background:  #FCF0F0;
+    color: #E16969;
+    height: 32px;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: unset;
+}
+
+.arkreen-button-dashed:hover{
+    color: #E16969 !important;
+    cursor: pointer;
+    background-color: #FCF0F0 !important;;
+}
+
+.arkreen-button-dashed:disabled{
+    color: #E16969 !important;
+    background-color: #FCF0F0 !important;
+    cursor: not-allowed;
+}
+
+.arkreen-avatar-change {
+    position:absolute;
+    background:rgba(0,0,0,0);
+    width:80px;
+    height:80px;
+    top: 0px;
+    padding-inline: 1px;
+}
+
+.arkreen-avatar-change-edit {
+    /* margin-top: 57px; */
+    text-align: center;
+    background: rgba(0,0,0,0);
+    border-radius: 8px;
+    cursor:pointer;
+    height: 80px;
+    line-height: 80px;
+    color: rgba(0,0,0,0);
+}
+
+.arkreen-avatar-change-edit:hover{
+    /* margin-top: 57px; */
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    cursor:pointer;
+    height: 80px;
+    line-height: 80px;
+    color: #FFFFFF;
+}
+
+
+.rank-scrollable-container {
+    padding-block:16px;
+}
