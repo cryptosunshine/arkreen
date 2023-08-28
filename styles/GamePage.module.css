@@ -1,0 +1,84 @@
+.group-main {
+    border-bottom: 1px solid #F6F6F9
+}
+
+.group-game-title {
+    color:var(--arkreen-text-primary);
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+    padding-block:8px;
+}
+
+.group-game-message {
+    display:flex;
+    padding-block:8px
+}
+
+
+/* mobile css */
+@media screen and (max-width: 576px) {
+    .group-main-context {
+        padding: 16px;
+    }
+
+    .group-main-img {
+        padding-inline:16px;
+        text-align: center;
+    }
+
+    .group-main-info {
+        padding-inline:16px;
+        text-align: center;
+    }
+
+    .group-game-detail {
+        padding-block:6px 8px;
+        text-align:center;
+    }
+
+    .group-game-op {
+        padding-top: 16px;
+        padding-block:6px 8px;
+        text-align:center;
+    }
+}
+
+/* pc css */
+@media screen and (min-width: 576px) {
+    .group-main-context {
+        display:flex;
+        padding-block:24px;
+        gap: 120px;
+    }
+
+    .group-main-img {
+        flex: 1;
+        text-align: -webkit-right;
+    }
+
+    .group-main-info {
+        flex:1;
+        padding:24px;
+        padding-right:96px
+    }
+
+    .group-game-detail {
+        padding-block:6px 8px;
+        padding-inline:40px;
+        min-width: 240px;
+        text-align:center;
+        gap:12px
+    }
+
+    .group-main-info .div_box{
+        min-width: 240px;
+        max-width: 380px;
+    }
+
+    .group-game-op {
+        padding-top: 16px;
+        padding-block:6px 8px;
+        text-align:center;
+    }
+}

@@ -1,5 +1,7 @@
 import { Tag } from 'antd';
 import { WalletIcon, EllipseIcon, MinerIcon, NetworkIcon, ValidatorIcon, Maker2Icon, DangerIcon, SuccessIcon, WarningIcon } from '@/components/icons/ArkreenIcon'
+import { AntPoolIcon, BinancePoolIcon, BraiinsPoolIcon, F2PoolIcon, FoundryUSAPoolIcon, MARAPoolIcon, PoolinIcon, SBICryptoIcon, ViaBTCIcon } from '@/components/icons/PoolIcon';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 
 const accountTypeList = [
     { index: 1, name: 'Wallet' },
@@ -33,6 +35,34 @@ const txTypeList = [
     { index: 11, name: 'TX_Withdraw' },
     { index: 13, name: 'TX_Airdrop_AKRE' },
 ]
+
+export function formatPoolTypeIcon(poolName: string) {
+    if (poolName.toLowerCase() == 'AntPool'.toLowerCase()) {
+        return <AntPoolIcon />
+    } else if (poolName.toLowerCase() == 'F2Pool'.toLowerCase()) {
+        return <F2PoolIcon />
+    } else if (poolName.toLowerCase() == 'Foundry USA Pool'.toLowerCase()) {
+        return <FoundryUSAPoolIcon />
+    } else if (poolName.toLowerCase() == 'AntPool'.toLowerCase()) {
+        return <AntPoolIcon />
+    } if (poolName.toLowerCase() == 'Binance'.toLowerCase()) {
+        return <BinancePoolIcon />
+    } else if (poolName.toLowerCase() == 'SBICrypto'.toLowerCase()) {
+        return <SBICryptoIcon />
+    }else if (poolName.toLowerCase() == 'SlushPool'.toLowerCase()) {
+        return <BraiinsPoolIcon />
+    } else if (poolName.toLowerCase() == 'ViaBTC'.toLowerCase()) {
+        return <ViaBTCIcon />
+    } else if (poolName.toLowerCase() == 'MaraPool'.toLowerCase()) {
+        return <MARAPoolIcon />
+    } if (poolName.toLowerCase() == 'Poolin'.toLowerCase()) {
+        return <PoolinIcon />
+    } else if (poolName.toLowerCase() == 'Unknown'.toLowerCase()) {
+        return <QuestionCircleOutlined />
+    }else {
+        return <>?</>
+    }
+}
 
 export function formatTxTypeTag(txType: number) {
     const type = txTypeList[txType - 1]
@@ -105,6 +135,17 @@ export function formatStatusIcon(type?: string, text?: string) {
         return <Tag icon={<MinerIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E8F9F9" style={{ color: '#19BEBE' }}>{text}</Tag>
     } else {
         return <Tag icon={<SuccessIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E9F6F3" style={{ color: '#1FA484' }}>{text}</Tag>
+    }
+}
+
+
+export function formatBlockStatusIcon(status:number) {
+    if (status === 0) {
+        return <div style={{textAlign:'center',display:'flex',justifyContent:'space-evenly'}}><div style={{background:'#E8F9F9',color:'#19BEBE',padding:'3px',width:'128px',textAlign:'center',display:'block',borderRadius:'20px'}}>确定中</div></div>
+    } else if (status === 1) {
+        return <div style={{textAlign:'center',display:'flex',justifyContent:'space-evenly'}}><div style={{background:'#E6F4EB',color:'#00913A',padding:'3px',width:'128px',textAlign:'center',display:'block',borderRadius:'20px'}}>已经确定</div></div>
+    } else if (status === 2) {
+        return <div style={{textAlign:'center',display:'flex',justifyContent:'space-evenly'}}><div style={{background:'#DF974259',color:'#DF9742',padding:'3px',width:'128px',textAlign:'center',display:'block',borderRadius:'20px'}}>已预估</div></div>
     }
 }
 

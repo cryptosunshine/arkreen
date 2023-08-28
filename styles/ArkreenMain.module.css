@@ -648,3 +648,10 @@
 .rank-scrollable-container {
     padding-block:16px;
 }
+
+.arkreen-input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 0px solid #F6F6F9;
+    outline: none;
+}

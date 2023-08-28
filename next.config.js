@@ -18,7 +18,11 @@ const nextConfig = withLess({
   exportPathMap: function () {
     return {
       '/': { page: '/' },
-      '/dashboard': { page: '/dashboard' },
+      '/btc-consumption': { page: '/btc-consumption' },
+      '/btc-blocks': { page: '/btc-blocks' },
+      '/arkreen-cells': { page: '/arkreen-cells' },
+      '/greening': { page: '/greening' },
+      '/btc-map': {page: '/btc-map'}
     }
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

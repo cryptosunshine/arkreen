@@ -1,88 +1,54 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { NextRouter, useRouter } from 'next/router';
 import Head from 'next/head'
 import "styles/app.less";
+import 'styles/leaflet.css';
 import { IntlProvider } from 'react-intl'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import * as localeTypes from '../locales/types';
 import locales from '../locales'
 import Layout from '@/components/layout'
 import '@rainbow-me/rainbowkit/styles.css';
-import {
-  RainbowKitProvider,
-  getDefaultWallets,
-  connectorsForWallets,
-} from '@rainbow-me/rainbowkit';
-import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+import 'styles/globals.css'
+import { RainbowKitProvider, connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { metaMaskWallet, walletConnectWallet, injectedWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import {
-  mainnet,
-  polygon,
-  optimism,
-  arbitrum,
-  zora,
-  goerli,
-} from 'wagmi/chains';
+import { polygon, polygonMumbai } from 'wagmi/chains';
+import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from 'wagmi/providers/public';
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    zora,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
-  ],
-  [publicProvider()]
-);
 
-const projectId = process.env.NEXT_PUBLIC_WALLET_CONNETC_PROJECT_ID || '';
+const projectId = '' + process.env.NEXT_PUBLIC_WALLET_CONNETC_PROJECT_ID;
+const ALCHEMY_ID = process.env.NEXT_PUBLIC_ALCHEMY_ID || '';
 
-const { wallets } = getDefaultWallets({
-  appName: 'Arkreen',
-  projectId,
-  chains,
-});
-
-const demoAppInfo = {
-  appName: 'Arkreen',
+const appInfo = {
+  appName: "Arkreen Console",
+  learnMoreUrl: "https://testconsole.arkreen.com",
 };
 
+const { chains, publicClient } = configureChains(
+    [process.env.NEXT_PUBLIC_CHAIN_NET=='production'?polygon:polygonMumbai],
+    [alchemyProvider({ apiKey: ALCHEMY_ID }), publicProvider()]
+);
+
 const connectors = connectorsForWallets([
-  ...wallets,
   {
-    groupName: 'Other',
+    groupName: "Suggested",
     wallets: [
-      argentWallet({ projectId, chains }),
-      trustWallet({ projectId, chains }),
-      ledgerWallet({ projectId, chains }),
+      metaMaskWallet({ projectId,chains }),
+      walletConnectWallet({ projectId:projectId,chains:chains }),
+      injectedWallet({ chains }),
     ],
   },
 ]);
 
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-  webSocketPublicClient,
-});
+const config = createConfig({ autoConnect: true, connectors, publicClient });
 
 const App = ({ Component, pageProps }: AppProps) => {
+  //
   const queryClient = new QueryClient()
   const router = useRouter();
-
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   // 在页面组件加载完成后，设置 loading 状态为 false
-  //   setLoading(false);
-  // }, []);
-
   // 多语言配置
   const DefaultLocale = 'en';
   const { locale = DefaultLocale, defaultLocale, pathname }: NextRouter = router;
@@ -95,7 +61,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     if (theme) {
       document.documentElement.classList.add(theme);
     }
-
 
     const handleRouteChange = (url: any) => {
       if (window.gtag) {
@@ -110,11 +75,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, [router.events])
 
-
-  // 在 loading 为 true 或者当前路由不是根路径时，不显示任何内容
-  // if (loading || router.pathname !== '/') return null;
-
-
   return (
     <>
       <Head>
@@ -124,33 +84,16 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                          page_path: window.location.pathname,
-          });`}}
-        /> */}
       </Head>
       <QueryClientProvider client={queryClient}>
-        <IntlProvider
-          locale={locale}
-          defaultLocale={defaultLocale}
-          messages={messages}
-        >
-
-          <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
+        <IntlProvider locale={locale} defaultLocale={defaultLocale} messages={messages}>
+          <WagmiConfig config={config}>
+            <RainbowKitProvider modalSize="compact" chains={chains} showRecentTransactions={true} appInfo={appInfo}>
               <Layout>
                 <Component {...pageProps} />
               </Layout>
             </RainbowKitProvider>
           </WagmiConfig>
-
         </IntlProvider>
       </QueryClientProvider>
     </>

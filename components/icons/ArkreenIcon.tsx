@@ -3,7 +3,95 @@ import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/
 import Icon from '@ant-design/icons';
 
 const fillStyle = {fill: 'currentColor'}
+const strokeStyle = {stroke: 'currentColor'}
 
+export function Vector2Icon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width="32" height="24" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.4883 5.01242L13.5117 22.9892L4.51172 13.9892" stroke="#00913A" strokeWidth="6" strokeLinecap="square"/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+export function Vector1Icon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="3" width="6" height="20" fill="#E16969"/>
+            <rect x="14" y="28" width="6" height="6" fill="#E16969"/>
+        </svg>
+
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+export function Btn1Icon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.style?.width?props.style.width:"32px"} height={props.style?.height?props.style.height:"32px"} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="11" y="15.5" width="10" height="2" rx="1" fill="white"/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+export function Btn2Icon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.style?.width?props.style.width:"32px"} height={props.style?.height?props.style.height:"32px"}  viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M15 20.5C15 21.0523 15.4477 21.5 16 21.5C16.5523 21.5 17 21.0523 17 20.5V17.5H20C20.5523 17.5 21 17.0523 21 16.5C21 15.9477 20.5523 15.5 20 15.5H17V12.5C17 11.9477 16.5523 11.5 16 11.5C15.4477 11.5 15 11.9477 15 12.5L15 15.5H12C11.4477 15.5 11 15.9477 11 16.5C11 17.0523 11.4477 17.5 12 17.5H15L15 20.5Z" fill="white"/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+export function SmileIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.style?.width?props.style.width:"17px"} height={props.style?.height?props.style.height:"17px"} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M8.99957 16.5C13.1415 16.5 16.4991 13.1421 16.4991 9C16.4991 4.85786 13.1415 1.5 8.99957 1.5C4.85767 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85767 16.5 8.99957 16.5Z" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M6 10.5C6 10.5 7.12493 12 8.99983 12C10.8747 12 11.9997 10.5 11.9997 10.5" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M6.75 6.75H6.7575" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M11.25 6.75H11.2575" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+export function TmsIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.style?.width?props.style.width:"17px"} height={props.style?.height?props.style.height:"17px"} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M8.99957 16.5C13.1415 16.5 16.4991 13.1421 16.4991 9C16.4991 4.85786 13.1415 1.5 8.99957 1.5C4.85767 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85767 16.5 8.99957 16.5Z" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M8.98834 9.32832V4.60918" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M8.98766 9.32719L13.546 8.10592" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+
+export function Down2Icon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width='15px' height={props.style?.height?props.style.height:"17px"} viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path  style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M10.6623 12.6579L7.48047 15.8398L7.48258 15.8382" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+            <path  style={strokeStyle} stroke={props.style?.color?props.style.color:"#00913A"} d="M7.48052 15.8364V0.874512" strokeWidth="1.49996" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
 
 export function WalletIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
     const svg = () => (
@@ -69,6 +157,21 @@ export function MinerIcon(props: Partial<CustomIconComponentProps>): JSX.Element
         <Icon component={svg} {...props} />
     );
 }
+
+export function ArrowDownMinerIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.width?props.width:"24px"} height={props.height?props.height:"24px"} viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path style={strokeStyle} d="M12 5.44922V19.4492" stroke={props.style?.color?props.style?.color:"#101020"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path style={strokeStyle} d="M19 12.4492L12 19.4492L5 12.4492" stroke={props.style?.color?props.style?.color:"#101020"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+
+
 
 export function RankIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
     const svg = () => (
@@ -624,6 +727,33 @@ export function AccountLineIcon(props: Partial<CustomIconComponentProps>): JSX.E
         <Icon component={svg} {...props} />
     );
 }
+
+
+export function RiseLineIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.width?props.width:"1em"} height={props.height?props.height:"1em"} viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.1266 6.44712L19.9486 6.44862L20.1106 6.47112L20.2801 6.52062L20.4331 6.59262L20.4901 6.62712L20.5636 6.67962L20.6776 6.78012L20.8036 6.93162L20.8921 7.08162L20.9536 7.23912L20.9881 7.38612L21.0031 7.57212V14.3281C21.003 14.6132 20.8947 14.8875 20.7001 15.0958C20.5055 15.3041 20.2391 15.4307 19.9548 15.4502C19.6704 15.4696 19.3893 15.3803 19.1681 15.2005C18.947 15.0206 18.8024 14.7635 18.7636 14.4811L18.7546 14.3281L18.7516 10.2871L12.4216 16.6216C12.2309 16.8129 11.9778 16.9293 11.7085 16.9494C11.4391 16.9695 11.1715 16.892 10.9546 16.7311L10.8286 16.6216L8.62659 14.4121L4.92159 18.1186C4.72085 18.3199 4.45135 18.4377 4.16728 18.4484C3.8832 18.4591 3.60561 18.3618 3.39033 18.1762C3.17504 17.9906 3.03801 17.7303 3.0068 17.4477C2.97559 17.1652 3.05251 16.8813 3.22209 16.6531L3.33159 16.5271L7.82859 12.0271C8.01916 11.8362 8.27199 11.7201 8.54099 11.7C8.80999 11.6799 9.07726 11.7571 9.29409 11.9176L9.42009 12.0271L11.6266 14.2366L17.1631 8.69712H13.1266C12.8547 8.69711 12.5921 8.59866 12.3872 8.41997C12.1823 8.24128 12.0491 7.99445 12.0121 7.72512L12.0016 7.57212C12.0016 6.95112 12.5056 6.44712 13.1266 6.44712Z" style={fillStyle} fill={props.style?.color?props.style.color:"#00913A"}/>
+        </svg>
+
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+
+export function DecLineIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
+    const svg = () => (
+        <svg width={props.width?props.width:"1em"} height={props.height?props.height:"1em"} viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.1266 18.4513L19.9486 18.4498L20.1106 18.4273L20.2801 18.3778L20.4331 18.3058L20.4901 18.2713L20.5636 18.2188L20.6776 18.1183L20.8036 17.9668L20.8921 17.8168L20.9536 17.6593L20.9881 17.5123L21.0031 17.3263V10.5703C21.003 10.2853 20.8947 10.0109 20.7001 9.80263C20.5055 9.59435 20.2391 9.46771 19.9548 9.44828C19.6704 9.42885 19.3893 9.51809 19.1681 9.69797C18.947 9.87784 18.8024 10.1349 18.7636 10.4173L18.7546 10.5703L18.7516 14.6113L12.4216 8.27682C12.2309 8.0855 11.9778 7.96917 11.7085 7.94906C11.4391 7.92896 11.1715 8.00643 10.9546 8.16732L10.8286 8.27682L8.62659 10.4863L4.92159 6.77982C4.72085 6.57853 4.45135 6.4607 4.16728 6.45001C3.8832 6.43933 3.60561 6.53659 3.39033 6.72224C3.17504 6.90788 3.03801 7.16815 3.0068 7.4507C2.97559 7.73326 3.05251 8.01716 3.22209 8.24532L3.33159 8.37132L7.82859 12.8713C8.01916 13.0622 8.27199 13.1783 8.54099 13.1984C8.80999 13.2185 9.07726 13.1413 9.29409 12.9808L9.42009 12.8713L11.6266 10.6618L17.1631 16.2013H13.1266C12.8547 16.2013 12.5921 16.2998 12.3872 16.4785C12.1823 16.6572 12.0491 16.904 12.0121 17.1733L12.0016 17.3263C12.0016 17.9473 12.5056 18.4513 13.1266 18.4513Z" style={fillStyle} fill={props.style?.color?props.style.color:"#0072DB"}/>
+        </svg>
+    );
+    return (
+        <Icon component={svg} {...props} />
+    );
+}
+
+
 
 export function USDTIcon(props: Partial<CustomIconComponentProps>): JSX.Element {
     const svg = () => (

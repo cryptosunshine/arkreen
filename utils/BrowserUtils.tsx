@@ -2,7 +2,7 @@
 
 import { message } from 'antd';
 import { useEffect, useState } from 'react'
-import {ShopIcon,DashboardLineIcon,WithdrawIcon,SettingsIcon,MinerIcon,RankIcon} from '@/components/icons/ArkreenIcon'
+import {ShopIcon,WithdrawIcon,SettingsIcon,MinerIcon,RankIcon} from '@/components/icons/ArkreenIcon'
 import {formatDate} from './DataFormatUtils'
 
 export function copyText(text:string){
@@ -69,13 +69,7 @@ const addressList = ['0x7e22efF00FB878319606AA085316E72e19e9761B','0xB4A63B11c68
 
 export function getMenuList(address:string){
   const menuList = [];
-  const dashboard = {
-    key: 'dashboard',
-    sort: '1',
-    icon: <DashboardLineIcon/>,
-    label: 'Dashboard',
-    url: '/dashboard'
-  }
+
   const shop = {
     key: 'shop',
     sort: '2',
@@ -140,11 +134,8 @@ export function getMenuList(address:string){
     url: '/game',
   }
   //
-  menuList.push(dashboard);
   menuList.push(shop)
   menuList.push(withdraw)
-  //
-  
   //
   if(addressList.includes(address)){
     //menuList.push(onboard)
@@ -153,65 +144,11 @@ export function getMenuList(address:string){
     menuList.push(rank)
     menuList.push(profile)
     menuList.push(settings)
-    //menuList.push(game)
+    
   }
+  menuList.push(game)
   
   return menuList;
-}
-
-const log_key = "Arkreen_Console_LogHistory"
-const log_set_num_key = "Arkreen_Console_LogHistory_line"
-const event_name = "Arkreen_Console_Set_Item_Event"
-
-export function useLogHistory(){
-  const [message,setMessage] = useState<any>(getLogHistory())
-  useEffect(() => {
-    function rightCartData() {
-      setMessage(getLogHistory());
-    }
-
-    window.addEventListener(event_name, rightCartData);
-
-    return () => {
-      window.removeEventListener(event_name, rightCartData)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-  return message
-}
-
-export function getLogHistory(){
-  if (typeof window === "undefined") {
-    return;
-  }
-  return window?.sessionStorage?.getItem(log_key)
-}
-
-export function setLogHistory(message:string){
-  if (typeof window === "undefined") {
-    return;
-  }
-  let num = Number(window.sessionStorage.getItem(log_set_num_key));
-  if(num>100){
-    const str = formatDate(Number(new Date()),'yyyy-MM-dd HH:mm:ss')+' - 日志信息超过阈值[100]，已自动清空历史数据';
-    window.sessionStorage.setItem(log_key,str);
-    window.sessionStorage.setItem(log_set_num_key,'1');
-    num = 1
-  }
-  const old = getLogHistory()
-  const str = formatDate(Number(new Date()),'yyyy-MM-dd HH:mm:ss')+' - ' + message + '\r\n\r\n'+ old 
-  window.sessionStorage.setItem(log_key,str);
-  window.dispatchEvent(new Event(event_name));
-  window.sessionStorage.setItem(log_set_num_key,num?''+(num+1):'1');
-}
-
-export function clearLogHistory(){
-  if (typeof window === "undefined") {
-    return;
-  }
-  window.sessionStorage.setItem(log_key,'')
-  window.sessionStorage.removeItem(log_set_num_key)
-  setLogHistory('清空日志信息')
 }
 
 export function callWalletApp(type:string) {

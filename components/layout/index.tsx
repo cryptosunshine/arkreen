@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import AppSiderBar from "./AppSiderBar";
-import AppTopBar from "./AppTopBar";
 import AppFooterBar from "./AppFooterBar";
-import { useAccount } from "wagmi"
-import AppNoLoginTopBar from './AppNoLoginTopBar';
+import AppTopBar from './AppTopBar';
 
 type MainLayoutProps = {
   children: any
 }
 
 export default function MainLayout(prop: MainLayoutProps) {
-  const [catchConnected, setCatchConnected] = useState(false)
-  const { isConnected } = useAccount()
 
-  useEffect(() => {
-    setCatchConnected(isConnected)
-  }, [isConnected])
+  const mainStyle:React.CSSProperties = {
+    background:'#F5F5F5',
+    display:'flex',
+    flexDirection: 'column',
+    height:'100vh',
+    overflow:'hidden',
+  }
+
+  const contextStyle:React.CSSProperties = {
+    flex:1,
+    background: '#F5F5F5', 
+    boxSizing: 'content-box',
+    overflowY: 'scroll',
+    paddingLeft:'8px',
+  }
 
   return (
-    <div style={{ height: "100vh", display: 'flex', overflow: 'hidden' }}>
-      {catchConnected ? <AppSiderBar /> : <></>}
-      <div style={{ overflow: 'auto', overflowX: 'hidden', flex: 1 }}>
-        {catchConnected ? <AppTopBar /> : <AppNoLoginTopBar />}
-        <div style={{ background: '#F5F5F5', paddingInline: "20px", boxSizing: 'border-box', minHeight: 'calc(100% - 120px)', paddingBlock: '20px' }}>
-          {prop.children}
-        </div>
+    <div style={mainStyle}>
+      <div>
+        <AppTopBar />
+      </div>
+      <div style={contextStyle}>
+          <div style={{padding:'20px 12px',height: '100%'}}>
+            <div style={{paddingBottom:'20px',height: '100%'}}>{prop.children}</div>
+          </div>
+      </div>
+      <div>
         <AppFooterBar />
       </div>
     </div>

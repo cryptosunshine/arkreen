@@ -100,426 +100,85 @@
         "type": "function"
     }]
     },
-    "ArkreenRewardAbi": {
-      "withdraw": [{
+    "ArkreenGreenBTC": {
+      "authMintGreenBTC": [{
         "inputs": [
           {
+            "internalType": "uint256",
+            "name": "height",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "energyStr",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "cellCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "blockTime",
+            "type": "string"
+          },
+          {
             "internalType": "address",
-            "name": "receiver",
+            "name": "beneficiary",
             "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "value",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "nonce",
-            "type": "uint256"
           },
           {
             "internalType": "uint8",
-            "name": "v",
+            "name": "greenType",
             "type": "uint8"
           },
           {
-            "internalType": "bytes32",
-            "name": "r",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "s",
-            "type": "bytes32"
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct GreenBTC.Sig",
+            "name": "sig",
+            "type": "tuple"
           }
         ],
-        "name": "withdraw",
+        "name": "authMintGreenBTC",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
       }],
-      "nonces": [{
-        "name": "nonces",
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "account",
-            "type": "address"
-          }
-        ],
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      }]
-    },
-    "ArkreenNTFAbi":{
-      "GameMinerOnboard": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "miner",
-            "type": "address"
-          },
-          {
-            "internalType": "bool",
-            "name": "bAirDrop",
-            "type": "bool"
-          },
-          {
-            "internalType": "uint256",
-            "name": "deadline",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint8",
-                "name": "v",
-                "type": "uint8"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "r",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "s",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct SigRegister",
-            "name": "permitGameMiner",
-            "type": "tuple"
-          }
-        ],
-        "name": "GameMinerOnboard",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      }],
-      "StandardMinerOnboard": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "miner",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "deadline",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint8",
-                "name": "v",
-                "type": "uint8"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "r",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "s",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct Sig",
-            "name": "permitMiner",
-            "type": "tuple"
-          }
-        ],
-        "name": "StandardMinerOnboard",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      }],
-      "getMinerTokenID": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "miner",
-            "type": "address"
-          }
-        ],
-        "name": "getMinerTokenID",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "tokenID",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      }],
-      "balanceOf": [{
-          "inputs": [
-            {
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "balanceOf",
-          "outputs": [
-            {
-              "internalType": "uint256",
-              "name": "",
-              "type": "uint256"
-            }
-          ],
-          "stateMutability": "view",
-          "type": "function"
-      }],
-      "RemoteMinerOnboard": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "miner",
-            "type": "address"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint8",
-                "name": "v",
-                "type": "uint8"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "r",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "s",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct Sig",
-            "name": "permitMiner",
-            "type": "tuple"
-          },
-          {
-            "components": [
-              {
-                "internalType": "address",
-                "name": "token",
-                "type": "address"
-              },
-              {
-                "internalType": "uint256",
-                "name": "value",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "deadline",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint8",
-                "name": "v",
-                "type": "uint8"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "r",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "s",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct Signature",
-            "name": "permitToPay",
-            "type": "tuple"
-          }
-        ],
-        "name": "RemoteMinerOnboard",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      }],
-      "AllMinersToken": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          }
-        ],
-        "name": "AllMinersToken",
-        "outputs": [{
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-      }],
-      "nonces": [{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "account",
-            "type": "address"
-          }
-        ],
-        "name": "nonces",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      }],
-      "RemoteMinerOnboardNative":[{
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "miner",
-            "type": "address"
-          },
-          {
-            "components": [
-              {
-                "internalType": "address",
-                "name": "token",
-                "type": "address"
-              },
-              {
-                "internalType": "uint256",
-                "name": "value",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "deadline",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint8",
-                "name": "v",
-                "type": "uint8"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "r",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "s",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct Signature",
-            "name": "permitMiner",
-            "type": "tuple"
-          }
-        ],
-        "name": "RemoteMinerOnboardNative",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      }],
-      "RemoteMinerOnboardApproved":[
+      "tokenURI":[
         {
           "inputs": [
             {
-              "internalType": "address",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "internalType": "address",
-              "name": "miner",
-              "type": "address"
-            },
-            {
-              "components": [
-                {
-                  "internalType": "address",
-                  "name": "token",
-                  "type": "address"
-                },
-                {
-                  "internalType": "uint256",
-                  "name": "value",
-                  "type": "uint256"
-                },
-                {
-                  "internalType": "uint256",
-                  "name": "deadline",
-                  "type": "uint256"
-                },
-                {
-                  "internalType": "uint8",
-                  "name": "v",
-                  "type": "uint8"
-                },
-                {
-                  "internalType": "bytes32",
-                  "name": "r",
-                  "type": "bytes32"
-                },
-                {
-                  "internalType": "bytes32",
-                  "name": "s",
-                  "type": "bytes32"
-                }
-              ],
-              "internalType": "struct Signature",
-              "name": "permitMiner",
-              "type": "tuple"
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
             }
           ],
-          "name": "RemoteMinerOnboardApproved",
-          "outputs": [],
-          "stateMutability": "nonpayable",
+          "name": "tokenURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
           "type": "function"
         }
       ]

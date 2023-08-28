@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@arkreen-dev.rhnxm.mongodb.net">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.49">
+    <root id="1">
+      <ServerVersion>6.0.9</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="btc_block"/>
+    <schema id="4" parent="1" name="config"/>
+    <schema id="5" parent="1" name="game">
+      <LocalIntrospectionTimestamp>2023-08-18.09:57:46</LocalIntrospectionTimestamp>
+    </schema>
+    <schema id="6" parent="1" name="game_test"/>
+    <schema id="7" parent="1" name="local"/>
+    <schema id="8" parent="1" name="owon_push_endpoint"/>
+    <schema id="9" parent="1" name="remoteMiner-plant"/>
+    <schema id="10" parent="1" name="test">
+      <Current>1</Current>
+    </schema>
+    <schema id="11" parent="1" name="xenon_admin"/>
+    <schema id="12" parent="1" name="xenon_contract"/>
+    <schema id="13" parent="1" name="xenon_marketing"/>
+    <schema id="14" parent="1" name="xenon_network"/>
+    <schema id="15" parent="1" name="xenon_notary"/>
+    <schema id="16" parent="1" name="xenon_operations"/>
+    <schema id="17" parent="1" name="xenon_remote_miner"/>
+    <schema id="18" parent="1" name="xenon_standard_miner"/>
+    <schema id="19" parent="1" name="xenon_statistics"/>
+    <table id="20" parent="5" name="block_info"/>
+    <table id="21" parent="5" name="block_statistics"/>
+    <table id="22" parent="5" name="blocks"/>
+    <table id="23" parent="5" name="eventtrackingblocks"/>
+    <table id="24" parent="5" name="goods"/>
+    <table id="25" parent="5" name="layer_info"/>
+    <table id="26" parent="5" name="lotteries"/>
+    <table id="27" parent="5" name="players"/>
+    <table id="28" parent="5" name="power_info"/>
+    <table id="29" parent="5" name="robots"/>
+    <table id="30" parent="5" name="sales"/>
+    <column id="31" parent="20" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="32" parent="20" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="33" parent="20" name="cell_count">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="34" parent="20" name="date">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="35" parent="20" name="end_index">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="36" parent="20" name="estimated">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="37" parent="20" name="green_count">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="38" parent="20" name="guessed_miner">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="39" parent="20" name="median_time">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="40" parent="20" name="nonce">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="41" parent="20" name="power">
+      <DasType>Double|8s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="42" parent="20" name="reward_usd">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="43" parent="20" name="size">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="44" parent="20" name="start_index">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="45" parent="20" name="status">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="46" parent="20" name="status_days">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="47" parent="20" name="stripped_size">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="48" parent="20" name="time">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="49" parent="20" name="weight">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="50" parent="20" name="cell_count_days">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="51" parent="20" name="end_index_days">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="52" parent="20" name="green_count_days">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="53" parent="20" name="hash">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="54" parent="20" name="merkle_root">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="55" parent="20" name="power_days">
+      <DasType>Double|8s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="56" parent="20" name="start_index_days">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="57" parent="20" name="take_time">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="58" parent="20" name="id">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="59" parent="21" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="60" parent="21" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="61" parent="21" name="circulating_supply">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="62" parent="21" name="current_price">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="63" parent="21" name="green_increment">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="64" parent="21" name="power_increment">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="65" parent="21" name="power_total">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="66" parent="21" name="status">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="67" parent="21" name="time">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="68" parent="21" name="total">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="69" parent="21" name="total_cells">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="70" parent="21" name="circulating_supply_consumption">
+      <DasType>Double|8s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="71" parent="21" name="green_power_increment">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="72" parent="21" name="total_increment">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="73" parent="21" name="circulating_supply_consumption_increment">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="74" parent="21" name="green_power_total">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="75" parent="21" name="circulating_supply_increment">
+      <DasType>Int32|4s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="76" parent="21" name="green_total">
+      <DasType>Int32|4s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="77" parent="22" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="78" parent="22" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="79" parent="22" name="chainType">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="80" parent="22" name="latestTrackingBlock">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="81" parent="23" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="82" parent="23" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="83" parent="23" name="chainType">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="84" parent="23" name="eventTrackingBlock">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="85" parent="24" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="86" parent="24" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="87" parent="24" name="createTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="88" parent="24" name="image">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="89" parent="24" name="latestIssueNumber">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="90" parent="24" name="minimumPurchaseShare">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="91" parent="24" name="price">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="92" parent="24" name="salePeriod">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="93" parent="24" name="showPrice">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="94" parent="24" name="status">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="95" parent="24" name="stock">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="96" parent="24" name="totalShare">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="97" parent="24" name="type">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="98" parent="24" name="updateTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="99" parent="24" name="name">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="100" parent="25" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="101" parent="25" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="102" parent="25" name="blocks">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="103" parent="25" name="energy">
+      <DasType>Double|8s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="104" parent="25" name="green_blocks">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="105" parent="25" name="green_energy">
+      <DasType>Double|8s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="106" parent="25" name="layer">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="107" parent="25" name="point">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="108" parent="25" name="size">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="109" parent="25" name="x">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="110" parent="25" name="blocks_end">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="111" parent="25" name="y">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="112" parent="25" name="blocks_start">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="113" parent="26" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="114" parent="26" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="115" parent="26" name="drawTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="116" parent="26" name="player">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="117" parent="26" name="sale">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="118" parent="26" name="selectedNumberList">
+      <DasType>Array|2003s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="119" parent="27" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="120" parent="27" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="121" parent="27" name="address">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="122" parent="27" name="balance">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="123" parent="27" name="createTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="124" parent="27" name="updateTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="125" parent="28" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="126" parent="28" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="127" parent="28" name="annualised_consumption_guess">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="128" parent="28" name="date_time">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="129" parent="28" name="estimated">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="130" parent="28" name="power_guess">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="131" parent="28" name="power_max">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="132" parent="28" name="timestamp">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="133" parent="28" name="annualised_consumption_max">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="134" parent="28" name="power_min">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="135" parent="28" name="annualised_consumption_min">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="136" parent="29" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="137" parent="29" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="138" parent="29" name="address">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="139" parent="29" name="balance">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="140" parent="29" name="createTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="141" parent="29" name="privateKey">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="142" parent="29" name="status">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="143" parent="29" name="updateTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="144" parent="30" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="145" parent="30" name="award">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="146" parent="30" name="baseBlock">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="147" parent="30" name="createTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="148" parent="30" name="endTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="149" parent="30" name="goods">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="150" parent="30" name="issueNumber">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="151" parent="30" name="luckyNumber">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="152" parent="30" name="numberPool">
+      <DasType>Array|2003s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="153" parent="30" name="purchaseDeadLine">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="154" parent="30" name="soldShare">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="155" parent="30" name="status">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="156" parent="30" name="targetBlock">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="157" parent="30" name="totalShare">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="158" parent="30" name="updateTime">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="159" parent="30" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="160" parent="30" name="baseTime">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="161" parent="30" name="targetBlockHash">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="162" parent="30" name="targetTime">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+  </database-model>
+</dataSource>

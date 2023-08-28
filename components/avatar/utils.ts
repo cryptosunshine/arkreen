@@ -1,4 +1,4 @@
-import {faceComponents,clothesComponents,hairComponents,glassesComponents,hairColorList} from './OwnerCommons'
+import {clothesComponents, faceComponents, glassesComponents, hairColorList, hairComponents} from './OwnerCommons'
 
 
 const sexList = ['male','female']
@@ -71,9 +71,7 @@ function buildOwnerAvatarSvg(seedIndex:seedIndexType){
     //
     const body = '<g mask="url(#viewboxMask)"><path fill="#DDE0F8" d="M0 0h416v416H0z"/>'+face+clothes+hair+glasses+'</g>'
     //
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 416" fill="none" shape-rendering="auto">'+mask+body+'</svg>'
-    //
-    return svg;
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 416" fill="none" shape-rendering="auto">' + mask + body + '</svg>';
 }
 
 type seedIndexType = {

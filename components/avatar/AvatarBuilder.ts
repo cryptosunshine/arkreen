@@ -1,7 +1,5 @@
-import {antList,eyeList,faceList,mouthList,colorList} from './MinerCommons'
-
-import {hashCode,buildSeed,getOwnerAvatar,defaultOwnerAvatar} from './utils'
-
+import {antList, colorList, eyeList, faceList, mouthList} from './MinerCommons'
+import {buildSeed, defaultOwnerAvatar, getOwnerAvatar, hashCode} from './utils'
 
 type AvatarBuildType = {
     type?: 'owner' | 'miner' | undefined
@@ -50,9 +48,7 @@ function buildMinerAvatar(address:string){
     //
     const body = '<g mask="url(#viewboxMask)">'+ant+face+eye+mouth+'</g>'
     //
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106" fill="none" shape-rendering="auto">'+mask+body+'</svg>'
-    //
-    return svg;
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106" fill="none" shape-rendering="auto">' + mask + body + '</svg>';
 }
 
 

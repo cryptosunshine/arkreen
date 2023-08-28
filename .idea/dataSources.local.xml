@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="WS-232.8660.143">
+    <data-source name="@arkreen-dev.rhnxm.mongodb.net" uuid="d109b25b-4a6b-4972-95eb-d4363efab6fe">
+      <database-info product="Mongo DB" version="6.0.9" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="6.0.9" exact-driver-version="1.18" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>arkreen-dev</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="admin" />
+            <name qname="game" />
+            <name qname="xenon_admin" />
+            <name qname="xenon_contract" />
+            <name qname="xenon_marketing" />
+            <name qname="xenon_network" />
+            <name qname="xenon_notary" />
+            <name qname="xenon_operations" />
+            <name qname="xenon_remote_miner" />
+            <name qname="xenon_standard_miner" />
+            <name qname="xenon_statistics" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

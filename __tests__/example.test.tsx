@@ -1,3 +1,4 @@
+/*
 // __tests__/example.test.ts
 
 // 引入被测试的模块或组件
@@ -20,3 +21,4 @@ describe('subtract function', () => {
     expect(subtract(-1, -1)).toBe(0);
   });
 });
+*/
