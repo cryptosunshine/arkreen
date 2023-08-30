@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 import GameApi from "@/utils/backend/GameApi";
-import { Skeleton,Empty  } from 'antd';
+import Loading from '@/components/loading';
+import Empty from "@/components/empty";
 import { useWindowSize } from "@/utils/BrowserUtils";
 import ArkreenPaginationStyle from '../../styles/ArkreenPagination.module.css'
 
@@ -104,7 +105,7 @@ export default function Home() {
         <div style={{fontSize:'20px',fontWeight:700}}>Bitcoin Blocks</div>
         <div style={{paddingBlock:'20px'}}>
           {
-            !loading?((showList && showList.length>0)?<></>:<Empty />):<Skeleton active />
+            !loading?((showList && showList.length>0)?<></>:<Empty />):<Loading />
           }
           {
             dataList && dataList.length>0?(

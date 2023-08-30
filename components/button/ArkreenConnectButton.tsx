@@ -60,8 +60,8 @@ export default function ArkreenConnectButton(prop: ButtonProps): JSX.Element {
                             */}
                             {
                             <div onClick={openAccountModal} style={{flex:1,color:'#40404D',padding:'0px 12px 0px 12px',background:'#EFEFF1',borderRadius: prop.onlyAvatar?'8px 8px 8px 8px':'0px 8px 8px 0px',cursor:'pointer'}}>
-                                <div style={{display:'flex'}}>
-                                    <div style={{lineHeight:'35px'}}><ArkreenAvatar address={account.address} type='owner' shape='circle' /></div>
+                                <div style={{display:'flex', alignItems: 'center'}}>
+                                    <div ><ArkreenAvatar address={account.address} type='owner' shape='circle' /></div>
                                     <div>
                                         <span style={{marginLeft:'8px',fontSize:'16px',display:prop.onlyAvatar?'none':''}}>{account.displayName} </span> &nbsp;<DownOutlined style={{fontSize:'14px'}} />
                                     </div>

@@ -4,6 +4,9 @@ import { NextRouter, useRouter } from 'next/router';
 import Head from 'next/head'
 import "styles/app.less";
 import 'styles/leaflet.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 import { IntlProvider } from 'react-intl'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import * as localeTypes from '../locales/types';
@@ -23,8 +26,8 @@ const projectId = '' + process.env.NEXT_PUBLIC_WALLET_CONNETC_PROJECT_ID;
 const ALCHEMY_ID = process.env.NEXT_PUBLIC_ALCHEMY_ID || '';
 
 const appInfo = {
-  appName: "Arkreen Console",
-  learnMoreUrl: "https://testconsole.arkreen.com",
+  appName: "Arkreen Greenbtc",
+  learnMoreUrl: "https://greenbtc.arkreen.work",
 };
 
 const { chains, publicClient } = configureChains(
@@ -92,6 +95,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               <Layout>
                 <Component {...pageProps} />
               </Layout>
+              <ToastContainer />
             </RainbowKitProvider>
           </WagmiConfig>
         </IntlProvider>

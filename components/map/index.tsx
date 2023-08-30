@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Button, Drawer, Table, message } from 'antd';
+import { toast } from 'react-toastify';
+import { Drawer } from '@/components/drawer'
 import { useAccount } from "wagmi";
 import { useAddRecentTransaction } from '@rainbow-me/rainbowkit';
 import * as L from 'leaflet';
@@ -387,9 +388,14 @@ export default function Map() {
 
     const getBitMap = () => {
         GameApi.getBitMap().then((res: any) => {
-            if(res && res.result){
-                bitmap = _changeBufferToBytes(res.result.data);
+            if (res && res.result) {
                 console.log(bitmap)
+                if (bitmap.length == 0) {
+                    bitmap = _changeBufferToBytes(res.result.data);
+                    map.remove();
+                    map = null;
+                    init()
+                }
             }
         });
     }
@@ -397,41 +403,6 @@ export default function Map() {
         if (block === undefined) return;
         setLoading(true)
         const resp: any = await GameApi.getBlockDetails(block);
-        // {
-        //     "jsonrpc": "2.0",
-        //     "id": 69830179161975,
-        //     "result": {
-        //         "_id": "64cc838d66b09d6b955b0d5d",
-        //         "id": 103210,
-        //         "hash": "0000000000006ec6537423bcc471c81879462054bfc9d19e18cee773ff58466b",
-        //         "date": "2011-01-17",
-        //         "time": "2011-01-17 20:33:29",
-        //         "median_time": "2011-01-17 20:11:15",
-        //         "size": 215,
-        //         "stripped_size": 215,
-        //         "weight": 860,
-        //         "merkle_root": "5c937cab4a404aa14e90f953044531ac1cf0543cc733cee5a76a50802294b0ab",
-        //         "nonce": 2011661321,
-        //         "guessed_miner": "Unknown",
-        //         "reward_usd": "19.5",
-        //         "__v": 0,
-        //         "cell_count": 1,
-        //         "power": 180.12189839242328,
-        //         "take_time": 269,
-        //         "end_index": 103211,
-        //         "estimated": false,
-        //         "green_count": 0,
-        //         "start_index": 103210,
-        //         "status": 1,
-        //         "status_days": 1,
-        //         "cell_count_days": 1,
-        //         "end_index_days": 103232,
-        //         "green_count_days": 0,
-        //         "power_days": 0.10150411007903583,
-        //         "start_index_days": 103231
-        //     }
-        // }
-        // await new Promise((resolve) => { setTimeout(resolve, 1000) })
         console.log(resp)
         let dataSource: any = []
         Object.entries(resp.result).map(([key, value]) => {
@@ -443,9 +414,7 @@ export default function Map() {
         setDetails(dataSource)
         setLoading(false)
     }
-    const onClose = () => {
-        setOpen(false);
-    };
+
     window.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             mint()
@@ -454,9 +423,9 @@ export default function Map() {
 
     const mint = async () => {
         console.log('mint');
-        bitmap[activeBlock || 0] = 1;
-        cavasGridLayer.redraw()
-        return;
+        // bitmap[activeBlock || 0] = 1;
+        // cavasGridLayer.redraw()
+        // return;
         if (isConnected) {
             setMintLoading(true)
             const resp: any = await GameApi.queryAuthorizationAsGreenActor('' + address, activeBlock || 0)
@@ -485,29 +454,53 @@ export default function Map() {
                         }
 
                     } else {
-                        message.error('Green failed')
+                        toast.error("Green failed.", {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "dark",
+                        });
                     }
                 } catch (e) {
 
                 }
             } else {
-                message.error('获取签名失败！')
+                toast.error("获取签名失败！", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
             setMintLoading(false)
         }
     }
-
+    const openSea = (e: number | undefined) => {
+        window.open(`https://testnets.opensea.io/assets/mumbai/0xcac6cae0122aca84d26e89a49ffd71b120dbfad9/` + e)
+    }
     return (
         <>
-            <Drawer title={`Block ${activeBlock}`} placement="right" mask={false} onClose={onClose} open={open}>
-                <Button type="primary" loading={mintLoading} onClick={mint}>Mint</Button>
-                <Table
-                    loading={loading}
-                    dataSource={details}
-                    columns={columns}
-                    pagination={false}
-                    size="small" />
+            <Drawer title={`Block ${activeBlock}`} visible={open} onClose={() => setOpen(false)}>
+            {
+                    activeBlock && bitmap[activeBlock] === 1
+                        ?
+                        <button onClick={() => openSea(activeBlock)}>openSea</button>
+                        :
+                        <button onClick={mint}>Mint</button>
+                }
+                {/* loading={mintLoading}  */}
+
+                
             </Drawer>
+
             <div id="mapContainer"></div>
         </>
 

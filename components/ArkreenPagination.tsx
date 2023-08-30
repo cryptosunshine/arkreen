@@ -3,11 +3,10 @@
 import ArkreenPaginationStyle from '../styles/ArkreenPagination.module.css'
 import {LeftIcon,RightIcon} from './icons/ArkreenIcon'
 import { useState  } from "react";
-import { PaginationProps } from 'antd';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 
-export default function ArkreenPagination(prop: PaginationProps): JSX.Element {
+export default function ArkreenPagination(prop: any): JSX.Element {
 
     
     const router = useRouter()

@@ -1,5 +1,4 @@
-import { Tag } from 'antd';
-import { WalletIcon, EllipseIcon, MinerIcon, NetworkIcon, ValidatorIcon, Maker2Icon, DangerIcon, SuccessIcon, WarningIcon } from '@/components/icons/ArkreenIcon'
+
 import { AntPoolIcon, BinancePoolIcon, BraiinsPoolIcon, F2PoolIcon, FoundryUSAPoolIcon, MARAPoolIcon, PoolinIcon, SBICryptoIcon, ViaBTCIcon } from '@/components/icons/PoolIcon';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 
@@ -105,38 +104,7 @@ export function formatStatusTag(type: number) {
     return <span style={style}>{name}</span>
 }
 
-export function formatMinerTypeTag(minerType: number) {
-    const type = minerTypeList[minerType - 1]
-    if (type.index === 1) {
-        return <Tag icon={<EllipseIcon />} color=" #E8F9F9" style={{ color: '#19BEBE' }}>{type.name}</Tag>
-    } else if (type.index === 2) {
-        return <Tag icon={<EllipseIcon />} color=" #FCF5EC" style={{ color: '#DF9742' }}>{type.name}</Tag>
-    } else if (type.index === 3) {
-        return <Tag icon={<EllipseIcon />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    } else if (type.index === 4) {
-        return <Tag icon={<EllipseIcon />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    } else if (type.index === 5) {
-        return <Tag icon={<EllipseIcon />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    } else if (type.index === 6) {
-        return <Tag icon={<EllipseIcon />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    } else if (type.index === 7) {
-        return <Tag icon={<EllipseIcon />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    }
-}
 
-export function formatStatusIcon(type?: string, text?: string) {
-    if (type === 'success') {
-        return <Tag icon={<SuccessIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E9F6F3" style={{ color: '#1FA484' }}>{text}</Tag>
-    } else if (type === 'warning') {
-        return <Tag icon={<WarningIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #FCF5EC" style={{ color: '#DF9742' }}>{text}</Tag>
-    } else if (type === 'danger') {
-        return <Tag icon={<DangerIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #FCF0F0" style={{ color: '#E16969' }}>{text}</Tag>
-    } else if (type === 'pending') {
-        return <Tag icon={<MinerIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E8F9F9" style={{ color: '#19BEBE' }}>{text}</Tag>
-    } else {
-        return <Tag icon={<SuccessIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E9F6F3" style={{ color: '#1FA484' }}>{text}</Tag>
-    }
-}
 
 
 export function formatBlockStatusIcon(status:number) {
@@ -149,20 +117,7 @@ export function formatBlockStatusIcon(status:number) {
     }
 }
 
-export function formatAccountTypeIcon(accountType: number) {
-    const type = accountTypeList[accountType - 1]
-    if (type.index === 1) {
-        return <Tag icon={<WalletIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E9F6F3" style={{ color: '#1FA484' }}>{type.name}</Tag>
-    } else if (type.index === 2) {
-        return <Tag icon={<MinerIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E6F4EB" style={{ color: '#00913A' }}>{type.name}</Tag>
-    } else if (type.index === 3) {
-        return <Tag icon={<NetworkIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #FCF5EC" style={{ color: '#DF9742' }}>{type.name}</Tag>
-    } else if (type.index === 4) {
-        return <Tag icon={<ValidatorIcon style={{ width: '12.67px', height: '12.67px' }} />} color=" #E8F9F9" style={{ color: '#19BEBE' }}>{type.name}</Tag>
-    } else if (type.index === 5) {
-        return <Tag icon={<Maker2Icon style={{ width: '12.67px', height: '12.67px' }} />} color=" #F5F0FE" style={{ color: '#9D68F6' }}>{type.name}</Tag>
-    }
-}
+
 
 export function formatDate(value: number, format: string) {
     if (!value) { return; }

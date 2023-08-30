@@ -1,9 +1,9 @@
 'use client'
 
-import { message } from 'antd';
+import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react'
 import {ShopIcon,WithdrawIcon,SettingsIcon,MinerIcon,RankIcon} from '@/components/icons/ArkreenIcon'
-import {formatDate} from './DataFormatUtils'
+
 
 export function copyText(text:string){
     const input = document.createElement('input')
@@ -12,7 +12,16 @@ export function copyText(text:string){
     input.select();
     document.execCommand("Copy");
     document.body.removeChild(input);
-    message.success('Copied!');
+    toast.success("Copied!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+  });
 }
 
 interface WindowSize {

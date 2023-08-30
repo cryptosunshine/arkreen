@@ -1,8 +1,7 @@
 "use client"
 import React from 'react'
 import ArkreenPagination from '../ArkreenPagination'
-import { Skeleton } from 'antd'
-
+import Loading from '@/components/loading';
 
 type TableProps = {
     loading?: boolean
@@ -48,7 +47,7 @@ export default function ArkreenNativeTable(prop: TableProps): JSX.Element {
                     emptyItems.map(() =>
                         <tr key={'table_tr_'+Math.random()} style={{height:'72px'}}>
                         {
-                            prop.titleList.map(() => <th key={'th_key_'+Math.random()} style={{paddingInline:'16px'}}><Skeleton.Input active block /></th>)
+                            prop.titleList.map(() => <th key={'th_key_'+Math.random()} style={{paddingInline:'16px'}}><Loading /></th>)
                         }
                         </tr>
                     )

@@ -1,13 +1,11 @@
 "use client"
 
 import React,{useEffect, useState} from 'react';
-import { Layout } from 'antd';
 import { ArkreenLogoSingleIcon,ArkreenLogoTextUnionIcon} from '../icons/ArkreenIcon'
 import PageTopStyle from '@/styles/PageTop.module.css'
 import ArkreenConnectButton from '../button/ArkreenConnectButton'
 import { useRouter } from 'next/router';
 
-const { Header } = Layout;
 
 function AppNoLoginTopBar(){
   const router = useRouter()
@@ -28,7 +26,7 @@ function AppNoLoginTopBar(){
   },[router.pathname])//eslint-disable-line
 
   return (
-    <Header className={PageTopStyle['header-style']}>
+    <div className={PageTopStyle['header-style']}>
       <div className={PageTopStyle['top-menu-box-pc']} style={{display:'flex'}}>
         <div style={{marginTop:'-6px',paddingLeft:'24px',cursor:'pointer'}} onClick={() => itemOnClick('/')}>
           <ArkreenLogoSingleIcon /><ArkreenLogoTextUnionIcon style={{marginLeft:'10px'}}/>
@@ -49,7 +47,7 @@ function AppNoLoginTopBar(){
           <div><ArkreenConnectButton showBalance={true}/></div>
         </div>
       </div>
-    </Header>
+    </div>
   );
 }
 
